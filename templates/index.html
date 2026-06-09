@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Scientific Calculator</title>
+    <link rel="stylesheet" href="/static/style.css">
+  </head>
+  <body>
+    <main class="calculator-shell">
+      <section class="calculator" aria-label="Scientific calculator">
+        <div class="brand-row">
+          <span class="brand-mark">C</span>
+          <div>
+            <h1>Calculator</h1>
+            <p>Scientific mode</p>
+          </div>
+        </div>
+
+        <form method="post" class="calculator-form">
+          <label class="display-label" for="expression">Expression</label>
+          <input
+            id="expression"
+            class="display"
+            name="expression"
+            value="{{ expression }}"
+            autocomplete="off"
+            inputmode="decimal"
+            aria-describedby="result-message"
+          >
+
+          <div id="result-message" class="status" aria-live="polite">
+            <span>{{ result }}</span>
+            <strong>{{ error }}</strong>
+          </div>
+
+          <div class="button-grid">
+            <button class="function" name="key" value="clear">AC</button>
+            <button class="function" name="key" value="backspace">DEL</button>
+            <button class="function" name="key" value="(">(</button>
+            <button class="function" name="key" value=")">)</button>
+            <button class="operator" name="key" value="/">/</button>
+
+            <button class="scientific" name="key" value="sqrt">sqrt</button>
+            <button class="scientific" name="key" value="square">x²</button>
+            <button class="scientific" name="key" value="log">log</button>
+            <button class="scientific" name="key" value="ln">ln</button>
+            <button class="operator" name="key" value="*">*</button>
+
+            <button class="scientific" name="key" value="sin">sin</button>
+            <button class="number" name="key" value="7">7</button>
+            <button class="number" name="key" value="8">8</button>
+            <button class="number" name="key" value="9">9</button>
+            <button class="operator" name="key" value="-">-</button>
+
+            <button class="scientific" name="key" value="cos">cos</button>
+            <button class="number" name="key" value="4">4</button>
+            <button class="number" name="key" value="5">5</button>
+            <button class="number" name="key" value="6">6</button>
+            <button class="operator" name="key" value="+">+</button>
+
+            <button class="scientific" name="key" value="tan">tan</button>
+            <button class="number" name="key" value="1">1</button>
+            <button class="number" name="key" value="2">2</button>
+            <button class="number" name="key" value="3">3</button>
+            <button class="operator" name="key" value="%">%</button>
+
+            <button class="scientific" name="key" value="pi">pi</button>
+            <button class="scientific" name="key" value="e">e</button>
+            <button class="number" name="key" value="0">0</button>
+            <button class="number" name="key" value=".">.</button>
+            <button class="equals" name="key" value="equals">=</button>
+          </div>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
