@@ -17,7 +17,7 @@
   box-sizing: border-box;
 }
 
-body {
+/* body {
   min-height: 100vh;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -28,8 +28,8 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-/* body {
+} */
+body {
   min-height: 100vh;
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
@@ -39,7 +39,7 @@ body {
     radial-gradient(circle at 88% 18%, rgba(48, 213, 133, 0.68), transparent 27%),
     radial-gradient(circle at 25% 88%, rgba(95, 244, 214, 0.72), transparent 32%),
     linear-gradient(135deg, #465353 0%, #8b6ea9 48%, #83a475 100%);
-} */
+}
 
 .calculator-shell {
   min-height: 100vh;
