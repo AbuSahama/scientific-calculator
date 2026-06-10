@@ -20,8 +20,10 @@ from urllib.parse import parse_qs
 ROOT = Path(__file__).resolve().parent
 TEMPLATE = ROOT / "templates" / "index.html"
 STYLE = ROOT / "static" / "style.css"
-HOST = "127.0.0.1"
-PORT = 8000
+import os
+
+HOST = "0.0.0.0"
+PORT = int(os.environ.get("PORT", 8000))
 
 CONSTANTS = {
     "pi": math.pi,
